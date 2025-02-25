@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tambah Transaksi</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-4">Tambah Transaksi Baru</h1>
+        <form action="/add" method="post">
+            <div class="form-group">
+                <label for="date">Tanggal:</label>
+                <input type="text" class="form-control" id="date" name="date">
+            </div>
+            <div class="form-group">
+                <label for="description">Deskripsi:</label>
+                <input type="text" class="form-control" id="description" name="description">
+            </div>
+            <div class="form-group">
+                <label for="amount">Jumlah:</label>
+                <input type="text" class="form-control" id="amount" name="amount">
+            </div>
+            <div class="form-group">
+                <label for="type">Tipe:</label>
+                <select class="form-control" id="type" name="type">
+                    <option value="income">Pendapatan</option>
+                    <option value="expense">Pengeluaran</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Tambah Transaksi</button>
+        </form>
+        <a href="/" class="btn btn-secondary mt-3">Kembali ke Halaman Utama</a>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
